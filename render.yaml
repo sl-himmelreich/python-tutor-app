@@ -3,8 +3,8 @@ services:
     name: python-tutor
     runtime: node
     plan: free
-    buildCommand: npm install && npm run build
-    startCommand: npm start
+    buildCommand: npm install --production
+    startCommand: node dist/index.cjs
     envVars:
       - key: GEMINI_API_KEY
         sync: false
